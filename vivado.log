@@ -1,0 +1,2477 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jun  1 10:53:59 2019
+# Process ID: 5496
+# Current directory: C:/FILES/asw_files/FPGA/spartan7_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4972 C:\FILES\asw_files\FPGA\spartan7_test\spartan7_test.xpr
+# Log file: C:/FILES/asw_files/FPGA/spartan7_test/vivado.log
+# Journal file: C:/FILES/asw_files/FPGA/spartan7_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 781.355 ; gain = 92.531
+update_compile_order -fileset sources_1
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v w ]
+add_files C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v
+update_compile_order -fileset sources_1
+set_property top spi_receive [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci' is already up-to-date
+[Sat Jun  1 17:03:35 2019] Launched synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/runme.log
+[Sat Jun  1 17:03:35 2019] Launched impl_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/impl_1/runme.log
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v w ]
+add_files -fileset sim_1 C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v
+update_compile_order -fileset sim_1
+set_property top spi_receive_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+"xvhdl --incr --relax -prj spi_receive_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot spi_receive_tbh_behav xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xsim.dir/spi_receive_tbh_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xsim.dir/spi_receive_tbh_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Jun  1 17:15:43 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Jun  1 17:15:43 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 890.969 ; gain = 0.039
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_behav -key {Behavioral:sim_1:Functional:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 907.719 ; gain = 17.457
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 928.566 ; gain = 0.000
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4398] Generator version for shapeDB does not match. shapeDB will be regenerated.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1574.613 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1574.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1656.184 ; gain = 727.617
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/xsim.dir/spi_receive_tbh_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/xsim.dir/spi_receive_tbh_time_impl/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Jun  1 17:20:51 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Jun  1 17:20:51 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1665.633 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_time_impl -key {Post-Implementation:sim_1:Timing:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1665.633 ; gain = 737.066
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.633 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.633 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.633 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1665.633 ; gain = 0.000
+run 5 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 5 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci' is already up-to-date
+[Sat Jun  1 17:32:24 2019] Launched synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/runme.log
+[Sat Jun  1 17:32:24 2019] Launched impl_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4398] Generator version for shapeDB does not match. shapeDB will be regenerated.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1665.633 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1665.633 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1687.930 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_time_impl -key {Post-Implementation:sim_1:Timing:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1687.930 ; gain = 13.969
+run 5 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1689.254 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1689.254 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1689.254 ; gain = 1.324
+run 5 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1689.941 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1689.941 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1689.941 ; gain = 0.688
+run 5 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1690.914 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1690.914 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1690.914 ; gain = 0.973
+run 5 us
+run 5 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1692.504 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1692.504 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1692.504 ; gain = 1.590
+run 5 us
+run 5 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1694.027 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1694.027 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1694.027 ; gain = 1.523
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci' is already up-to-date
+[Sun Jun  2 00:22:30 2019] Launched synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/runme.log
+[Sun Jun  2 00:22:30 2019] Launched impl_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4398] Generator version for shapeDB does not match. shapeDB will be regenerated.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1844.555 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1844.555 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+ERROR: [VRFC 10-1412] syntax error near reg [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:7]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword reg used in incorrect context [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:7]
+INFO: [VRFC 10-2458] undeclared symbol SCK, assumed default net type wire [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:17]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register SCK is not permitted, left-hand side should be reg/integer/time/genvar [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:32]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register SCK is not permitted, left-hand side should be reg/integer/time/genvar [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:33]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register SCK is not permitted, left-hand side should be reg/integer/time/genvar [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:43]
+ERROR: [VRFC 10-2787] module spi_receive_tbh ignored due to previous errors [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__compare_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0__wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0__xpm_cdc_gray__...
+Compiling module xil_defaultlib.fifo_generator_0__clk_x_pntrs
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.fifo_generator_0__compare_1
+Compiling module xil_defaultlib.fifo_generator_0__compare_2
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0__rd_status_flag...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0__rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__rd_logic
+Compiling module xil_defaultlib.fifo_generator_0__compare
+Compiling module xil_defaultlib.fifo_generator_0__compare_0
+Compiling module xil_defaultlib.fifo_generator_0__wr_status_flag...
+Compiling module xil_defaultlib.fifo_generator_0__wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0__wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module simprims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_pr...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_ge...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_to...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__blk_mem_gen_v8...
+Compiling module xil_defaultlib.fifo_generator_0__memory
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0__fifo_generator...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1900.129 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_time_impl -key {Post-Implementation:sim_1:Timing:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1900.129 ; gain = 0.000
+run 10 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.Input_Depth {32} CONFIG.Output_Depth {32} CONFIG.Data_Count_Width {5} CONFIG.Write_Data_Count_Width {5} CONFIG.Read_Data_Count_Width {5} CONFIG.Full_Threshold_Assert_Value {29} CONFIG.Full_Threshold_Negate_Value {28}] [get_ips fifo_generator_0]
+generate_target all [get_files  C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+launch_runs -jobs 8 fifo_generator_0_synth_1
+[Sun Jun  2 00:42:24 2019] Launched fifo_generator_0_synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/sim_scripts -ip_user_files_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files -ipstatic_source_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/modelsim} {questa=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/questa} {riviera=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/riviera} {activehdl=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Sun Jun  2 00:55:48 2019] Launched synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/runme.log
+[Sun Jun  2 00:55:48 2019] Launched impl_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4398] Generator version for shapeDB does not match. shapeDB will be regenerated.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1906.449 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1906.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1931.199 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_time_impl -key {Post-Implementation:sim_1:Timing:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1931.199 ; gain = 14.051
+run 16 us
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1933.328 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1933.328 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1933.328 ; gain = 2.129
+run 16 us
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1935.305 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1935.305 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1935.305 ; gain = 1.977
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1936.883 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1936.883 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1936.883 ; gain = 1.578
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Sun Jun  2 01:18:39 2019] Launched synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/runme.log
+[Sun Jun  2 01:18:39 2019] Launched impl_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-4398] Generator version for shapeDB does not match. shapeDB will be regenerated.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1936.883 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1936.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1956.199 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "spi_receive_tbh_time_impl -key {Post-Implementation:sim_1:Timing:spi_receive_tbh} -tclbatch {spi_receive_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source spi_receive_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'spi_receive_tbh_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1956.199 ; gain = 10.676
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1957.785 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1957.785 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1957.785 ; gain = 1.586
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1958.469 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1958.469 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1958.469 ; gain = 0.684
+run 16 us
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'spi_receive_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj spi_receive_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim/spi_receive_tbh_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_xpm_cdc_gray__1
+INFO: [VRFC 10-311] analyzing module spi_frame_decoder
+INFO: [VRFC 10-311] analyzing module spi_func_decoder
+INFO: [VRFC 10-311] analyzing module spi_receive
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_fifo_generator_v13_2_2_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_memory
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_logic
+INFO: [VRFC 10-311] analyzing module fifo_generator_0_wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_receive_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/impl/timing/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot spi_receive_tbh_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.spi_receive_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "spi_receive_tbh_time_impl.sdf", for root module "spi_receive_tbh/u0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray
+Compiling module xil_defaultlib.fifo_generator_0_xpm_cdc_gray__1
+Compiling module xil_defaultlib.fifo_generator_0_clk_x_pntrs
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.fifo_generator_0_rd_status_flags...
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.fifo_generator_0_rd_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_rd_logic
+Compiling module xil_defaultlib.fifo_generator_0_wr_status_flags...
+Compiling module xil_defaultlib.fifo_generator_0_wr_bin_cntr
+Compiling module xil_defaultlib.fifo_generator_0_wr_logic
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module simprims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_pri...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_gen...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_top
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_blk_mem_gen_v8_...
+Compiling module xil_defaultlib.fifo_generator_0_memory
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0_fifo_generator_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.spi_frame_decoder
+Compiling module xil_defaultlib.spi_func_decoder
+Compiling module xil_defaultlib.spi_receive
+Compiling module xil_defaultlib.spi_receive_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot spi_receive_tbh_time_impl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1959.480 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1959.480 ; gain = 0.000
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1959.480 ; gain = 1.012
+run 16 us
+run 16 us
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  2 01:42:26 2019...

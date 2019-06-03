@@ -1,0 +1,371 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May 15 22:28:35 2019
+# Process ID: 9536
+# Current directory: C:/FILES/asw_files/FPGA/spartan7_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19312 C:\FILES\asw_files\FPGA\spartan7_test\spartan7_test.xpr
+# Log file: C:/FILES/asw_files/FPGA/spartan7_test/vivado.log
+# Journal file: C:/FILES/asw_files/FPGA/spartan7_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.xpr
+update_compile_order -fileset sources_1
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_encoder.v w ]
+add_files C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_encoder.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top spi_func_encoder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_encoder_tbh.v w ]
+add_files -fileset sim_1 C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_encoder_tbh.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top spi_func_encoder_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source spi_func_encoder_tbh.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_func_encoder_tbh.tcl
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_func_encoder_tbh.tcl
+close_sim
+close_design
+launch_simulation
+source spi_func_encoder_tbh.tcl
+close_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_func_encoder_tbh.tcl
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_func_encoder_tbh.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_design
+launch_simulation
+launch_simulation
+source spi_func_encoder_tbh.tcl
+close_sim
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+close_design
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_func_encoder_tbh.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_design
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v w ]
+add_files C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SPI_Slave [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SPI_slave_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source SPI_slave_tbh.tcl
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+close_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+source SPI_slave_tbh.tcl
+run 1 us
+run 1 us
+close_sim
+close_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_encoder_tbh.v w ]
+add_files -fileset sim_1 C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_encoder_tbh.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top spi_frame_encoder_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top spi_frame_encoder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim
+close_project
+open_project C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source spi_frame_encoder_tbh.tcl
+close_sim
+launch_simulation
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+relaunch_sim
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+relaunch_sim
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
+close_design
+launch_simulation
+source spi_frame_encoder_tbh.tcl
+run 1 us
+run 1 us
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 147
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 149
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 151
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 147
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 149
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 151
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 159
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 161
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 163
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 167
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 167
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 167
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 125
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 112
+restart
+run 2.6 us
+run all
+run all
+run all
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 125
+run all
+run all
+run all
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 114
+restart
+run all
+run all
+run all
+restart
+run all
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 125
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 116
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 118
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 61
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 66
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 69
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 69
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 71
+remove_bps -file {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} -line 71
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 71
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 76
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 81
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 86
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 88
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 93
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 95
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 97
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 99
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 101
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 131
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 133
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 135
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 137
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 141
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 145
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 147
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 149
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 151
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 153
+add_bp {C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v} 155
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+close_sim
+synth_design -rtl -name rtl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+relaunch_sim
+run 1 us
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+source spi_frame_encoder_tbh.tcl
+run 1 us
+close_sim

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../spartan7_test.srcs/sources_1/new/spi_frame_decoder.v" \
+"../../../../spartan7_test.srcs/sim_1/new/spi_frame_decoder_tbh.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

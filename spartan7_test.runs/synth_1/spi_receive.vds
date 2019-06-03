@@ -1,0 +1,624 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun  2 22:55:53 2019
+# Process ID: 9112
+# Current directory: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1
+# Command line: vivado.exe -log spi_receive.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spi_receive.tcl
+# Log file: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/spi_receive.vds
+# Journal file: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source spi_receive.tcl -notrace
+Command: synth_design -top spi_receive -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3176 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.563 ; gain = 101.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'spi_receive' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SPI_Slave' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SPI_Slave' (1#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/.Xil/Vivado-9112-MALIC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (2#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/.Xil/Vivado-9112-MALIC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'spi_frame_decoder' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_decoder.v:3]
+	Parameter S00 bound to: 16'b0000000000000000 
+	Parameter S01 bound to: 16'b0000000000000001 
+	Parameter S02 bound to: 16'b0000000000000010 
+	Parameter S03 bound to: 16'b0000000000000100 
+	Parameter S04 bound to: 16'b0000000000001000 
+	Parameter S05 bound to: 16'b0000000000010000 
+	Parameter S06 bound to: 16'b0000000000100000 
+	Parameter S07 bound to: 16'b0000000001000000 
+	Parameter S08 bound to: 16'b0000000010000000 
+	Parameter S09 bound to: 16'b0000000100000000 
+	Parameter S10 bound to: 16'b0000001000000000 
+	Parameter S11 bound to: 16'b0000010000000000 
+	Parameter S12 bound to: 16'b0000100000000000 
+	Parameter S13 bound to: 16'b0001000000000000 
+	Parameter S14 bound to: 16'b0010000000000000 
+	Parameter S15 bound to: 16'b0100000000000000 
+	Parameter S16 bound to: 16'b1000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'spi_frame_decoder' (3#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_func_decoder' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_decoder.v:3]
+	Parameter S00 bound to: 10'b0000000000 
+	Parameter S01 bound to: 10'b0000000001 
+	Parameter S02 bound to: 10'b0000000010 
+	Parameter S03 bound to: 10'b0000000100 
+	Parameter S04 bound to: 10'b0000001000 
+	Parameter S05 bound to: 10'b0000010000 
+	Parameter S06 bound to: 10'b0000100000 
+	Parameter S07 bound to: 10'b0001000000 
+	Parameter S08 bound to: 10'b0010000000 
+	Parameter S09 bound to: 10'b0100000000 
+	Parameter S10 bound to: 10'b1000000000 
+INFO: [Synth 8-6155] done synthesizing module 'spi_func_decoder' (4#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_frame_encoder' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v:3]
+	Parameter S00 bound to: 15'b000000000000000 
+	Parameter S01 bound to: 15'b000000000000001 
+	Parameter S02 bound to: 15'b000000000000010 
+	Parameter S03 bound to: 15'b000000000000100 
+	Parameter S04 bound to: 15'b000000000001000 
+	Parameter S05 bound to: 15'b000000000010000 
+	Parameter S06 bound to: 15'b000000000100000 
+	Parameter S07 bound to: 15'b000000001000000 
+	Parameter S08 bound to: 15'b000000010000000 
+	Parameter S09 bound to: 15'b000000100000000 
+	Parameter S10 bound to: 15'b000001000000000 
+	Parameter S11 bound to: 15'b000010000000000 
+	Parameter S12 bound to: 15'b000100000000000 
+	Parameter S13 bound to: 15'b001000000000000 
+	Parameter S14 bound to: 15'b010000000000000 
+	Parameter S15 bound to: 15'b100000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'spi_frame_encoder' (5#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_func_encoder' [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_encoder.v:3]
+	Parameter S00 bound to: 2'b00 
+	Parameter S01 bound to: 2'b01 
+	Parameter S02 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'spi_func_encoder' (6#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_encoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'spi_receive' (7#1) [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 465.031 ; gain = 156.559
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 465.031 ; gain = 156.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 465.031 ; gain = 156.559
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'u2'
+Finished Parsing XDC File [c:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'u2'
+Parsing XDC File [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 758.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 758.672 ; gain = 450.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 758.672 ; gain = 450.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for u2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 758.672 ; gain = 450.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "spi_sent_start" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'spi_frame_decoder'
+INFO: [Synth 8-5546] ROM "fifo_clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "frame_error" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "func_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "length_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "param1_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "frame_data_sum" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'spi_func_decoder'
+INFO: [Synth 8-5546] ROM "func_error" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "overlay_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "overlay_stop" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dac_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dac_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_sampling_rate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_data_request" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_request_nums" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'spi_frame_encoder'
+INFO: [Synth 8-5546] ROM "spi_sent_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "spi_frame_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     S00 |                00000000000000001 |                 0000000000000000
+                     S01 |                00000000000000010 |                 0000000000000001
+                     S02 |                00000000000000100 |                 0000000000000010
+                     S03 |                00000000000001000 |                 0000000000000100
+                     S04 |                00000000000010000 |                 0000000000001000
+                     S05 |                00000000000100000 |                 0000000000010000
+                     S06 |                00000000001000000 |                 0000000000100000
+                     S07 |                00000000010000000 |                 0000000001000000
+                     S08 |                00000000100000000 |                 0000000010000000
+                     S09 |                00000001000000000 |                 0000000100000000
+                     S10 |                00000010000000000 |                 0000001000000000
+                     S11 |                00000100000000000 |                 0000010000000000
+                     S14 |                00001000000000000 |                 0010000000000000
+                     S15 |                00010000000000000 |                 0100000000000000
+                     S16 |                00100000000000000 |                 1000000000000000
+                     S12 |                01000000000000000 |                 0000100000000000
+                     S13 |                10000000000000000 |                 0001000000000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'spi_frame_decoder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     S00 |                       0000000001 |                       0000000000
+                     S01 |                       0000000010 |                       0000000001
+                     S02 |                       0000000100 |                       0000000010
+                     S03 |                       0000001000 |                       0000000100
+                     S04 |                       0000010000 |                       0000001000
+                     S05 |                       0000100000 |                       0000010000
+                     S06 |                       0001000000 |                       0000100000
+                     S07 |                       0010000000 |                       0001000000
+                     S08 |                       0100000000 |                       0010000000
+                     S09 |                       1000000000 |                       0100000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'spi_func_decoder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     S00 |                 0000000000000001 |                  000000000000000
+                     S01 |                 0000000000000010 |                  000000000000001
+                     S02 |                 0000000000000100 |                  000000000000010
+                     S03 |                 0000000000001000 |                  000000000000100
+                     S04 |                 0000000000010000 |                  000000000001000
+                     S05 |                 0000000000100000 |                  000000000010000
+                     S06 |                 0000000001000000 |                  000000000100000
+                     S07 |                 0000000010000000 |                  000000001000000
+                     S08 |                 0000000100000000 |                  000000010000000
+                     S09 |                 0000001000000000 |                  000000100000000
+                     S10 |                 0000010000000000 |                  000001000000000
+                     S11 |                 0000100000000000 |                  000010000000000
+                     S12 |                 0001000000000000 |                  000100000000000
+                     S13 |                 0010000000000000 |                  001000000000000
+                     S14 |                 0100000000000000 |                  010000000000000
+                     S15 |                 1000000000000000 |                  100000000000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'spi_frame_encoder'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 758.672 ; gain = 450.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   5 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 20    
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 12    
+	  17 Input     16 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 8     
+	   3 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 2     
+	  16 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 4     
+	   3 Input     13 Bit        Muxes := 1     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  10 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   6 Input     10 Bit        Muxes := 1     
+	   7 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	  18 Input      8 Bit        Muxes := 1     
+	  17 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 13    
+	  11 Input      1 Bit        Muxes := 15    
+	  17 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SPI_Slave 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+Module spi_frame_decoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   5 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 12    
+	  17 Input     16 Bit        Muxes := 1     
+	   3 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 1     
+	  18 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 1     
+Module spi_func_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input     12 Bit        Muxes := 1     
+	  10 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   6 Input     10 Bit        Muxes := 1     
+	   7 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	  10 Input      9 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 15    
+Module spi_frame_encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 8     
+	  16 Input     15 Bit        Muxes := 1     
+	   3 Input     13 Bit        Muxes := 1     
+	  17 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 8     
+Module spi_func_encoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element u3/frame_error_reg was removed.  [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_decoder.v:140]
+WARNING: [Synth 8-6014] Unused sequential element u4/func_error_reg was removed.  [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_decoder.v:128]
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "u5/next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "u3/state_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/frame_data_sum" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/length_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/param1_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/func_byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/fifo_clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u3/fifo_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/overlay_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/overlay_stop" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/dac_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/dac_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/adc_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/adc_sampling_rate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/adc_data_request" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u4/adc_request_nums" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u5/state_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u5/spi_sent_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u5/spi_frame_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u5/fifo_rd_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u5/fifo_rd_clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'u3/spi_cs_end_register_reg[0]' (FD) to 'u5/spi_cs_end_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u3/spi_cs_end_register_reg[1]' (FD) to 'u5/spi_cs_end_reg_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 758.672 ; gain = 450.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 759.637 ; gain = 451.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 760.008 ; gain = 451.535
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|spi_receive | u5/spi_sent_start_reg_reg[1] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fifo_generator_0 |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |fifo_generator_0 |     1|
+|2     |BUFG             |     1|
+|3     |CARRY4           |     2|
+|4     |LUT1             |     4|
+|5     |LUT2             |    35|
+|6     |LUT3             |    38|
+|7     |LUT4             |    67|
+|8     |LUT5             |    79|
+|9     |LUT6             |   147|
+|10    |MUXF7            |     1|
+|11    |SRL16E           |     1|
+|12    |FDCE             |    77|
+|13    |FDPE             |     3|
+|14    |FDRE             |   174|
+|15    |IBUF             |    22|
+|16    |OBUF             |    44|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |   705|
+|2     |  u1     |SPI_Slave         |    58|
+|3     |  u3     |spi_frame_decoder |   274|
+|4     |  u4     |spi_func_decoder  |   137|
+|5     |  u5     |spi_frame_encoder |   122|
+|6     |  u6     |spi_func_encoder  |    37|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 791.316 ; gain = 189.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 791.316 ; gain = 482.844
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+108 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 791.316 ; gain = 494.320
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/synth_1/spi_receive.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file spi_receive_utilization_synth.rpt -pb spi_receive_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 791.316 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  2 22:56:30 2019...

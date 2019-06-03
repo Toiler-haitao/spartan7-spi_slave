@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_receive_tbh_time_impl/xsimk.exe -simmode gui -wdb spi_receive_tbh_time_impl.wdb -simrunnum 0 -socket 61614
+Design successfully loaded
+Design Loading Memory Usage: 17160 KB (Peak: 17160 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 22200 KB (Peak: 22200 KB)
+Simulation CPU Usage: 3218 ms

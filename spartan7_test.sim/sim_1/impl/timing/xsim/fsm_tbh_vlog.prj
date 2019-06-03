@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"fsm_tbh_time_impl.v" \
+"../../../../../spartan7_test.srcs/sim_1/new/fsm_tbh.v" \
+
+# Do not sort compile order
+nosort

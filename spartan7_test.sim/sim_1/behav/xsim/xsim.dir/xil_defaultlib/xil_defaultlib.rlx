@@ -1,0 +1,24 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v,1557661601,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v,,fifo_generator_0,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v,1557996945,verilog,,,,SPI_slave_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v,1557653796,verilog,,,,fifo_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v,1557652814,verilog,,,,SPI_slave_tbh2,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/fsm_tbh.v,1557506493,verilog,,,,fsm_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/led_tbh.v,1557818092,verilog,,,,led_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_decoder_tbh.v,1557816085,verilog,,,,spi_frame_decoder_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_encoder_tbh.v,1558000736,verilog,,,,spi_frame_encoder_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_decoder_tbh.v,1557821605,verilog,,,,spi_func_decoder_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_encoder_tbh.v,1557971055,verilog,,,,spi_func_encoder_tbh,,,,,,,,
+,,,,,,spi_receive_tbh,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v,1557997181,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_receive_tbh.v,,SPI_Slave,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/fsm.v,1557507654,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/fsm_tbh.v,,fsm,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/led.v,1557817329,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/led_tbh.v,,led,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_decoder.v,1557815949,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_decoder_tbh.v,,spi_frame_decoder,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_frame_encoder.v,1558010132,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_frame_encoder_tbh.v,,spi_frame_encoder,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_decoder.v,1557825175,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_decoder_tbh.v,,spi_func_decoder,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_func_encoder.v,1557970332,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/spi_func_encoder_tbh.v,,spi_func_encoder,,,,,,,,
+C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/new/spi_receive.v,1559379800,verilog,,C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v,,spi_receive,,,,,,,,

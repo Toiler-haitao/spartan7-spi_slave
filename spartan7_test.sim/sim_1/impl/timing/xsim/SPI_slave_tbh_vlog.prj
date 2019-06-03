@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"SPI_slave_tbh_time_impl.v" \
+"../../../../../spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" \
+
+# Do not sort compile order
+nosort

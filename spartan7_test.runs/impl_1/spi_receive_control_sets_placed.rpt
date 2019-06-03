@@ -1,0 +1,95 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Jun  2 22:57:09 2019
+| Host         : MALIC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file spi_receive_control_sets_placed.rpt
+| Design       : spi_receive
+| Device       : xc7s15
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    28 |
+| Unused register locations in slices containing registers |    58 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            5 |
+|      8 |            2 |
+|     14 |            1 |
+|    16+ |           20 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             162 |           25 |
+| No           | No                    | Yes                    |              96 |           24 |
+| No           | Yes                   | No                     |              16 |            3 |
+| Yes          | No                    | No                     |             102 |           18 |
+| Yes          | No                    | Yes                    |              64 |           11 |
+| Yes          | Yes                   | No                     |             206 |           29 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+---------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+|   Clock Signal  |                                  Enable Signal                                  |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------+---------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG  | u4/adc_data_request                                                             |                                 |                1 |              2 |
+|  clk_IBUF_BUFG  | u4/dac_start                                                                    |                                 |                1 |              2 |
+|  clk_IBUF_BUFG  | u4/adc_start                                                                    |                                 |                1 |              2 |
+|  clk_IBUF_BUFG  | u4/overlay_start                                                                |                                 |                1 |              2 |
+|  clk_IBUF_BUFG  | u4/overlay_stop                                                                 |                                 |                1 |              2 |
+|  clk_IBUF_BUFG  | u5/spi_sent_data_0                                                              |                                 |                3 |              8 |
+|  clk_IBUF_BUFG  | u5/spi_sent_data_0                                                              | u5/spi_sent_data[7]_i_1_n_0     |                2 |              8 |
+|  clk_IBUF_BUFG  | u3/state_counter_1                                                              | u3/state_counter[7]_i_1_n_0     |                4 |             14 |
+|  clk_IBUF_BUFG  |                                                                                 | u6/fifo_data[7]_i_1_n_0         |                3 |             16 |
+|  clk_IBUF_BUFG  | u1/byte_data_sent[7]_i_1_n_0                                                    | u1/CSr[1]                       |                2 |             16 |
+|  clk_IBUF_BUFG  | u1/byte_data_received[7]_i_1_n_0                                                |                                 |                2 |             16 |
+|  clk_IBUF_BUFG  | u1/byte_received                                                                | u1/CSr[1]                       |                2 |             16 |
+|  clk_IBUF_BUFG  | u3/func_byte                                                                    | u3/func_byte[7]_i_1_n_0         |                2 |             16 |
+|  clk_IBUF_BUFG  | u3/frame_data_sum_3                                                             | u3/frame_data_sum[7]_i_1_n_0    |                2 |             16 |
+|  clk_IBUF_BUFG  | u3/length_byte_0                                                                | u3/length_byte[7]_i_1_n_0       |                2 |             16 |
+|  clk_IBUF_BUFG  | u3/param1_byte_2                                                                | u3/param1_byte[7]_i_1_n_0       |                3 |             16 |
+|  clk_IBUF_BUFG  | u3/param1_byte_2                                                                | u3/param2_byte[7]_i_1_n_0       |                3 |             16 |
+|  clk_IBUF_BUFG  | u4/adc_request_nums                                                             | u4/adc_request_nums[7]_i_1_n_0  |                1 |             16 |
+|  clk_IBUF_BUFG  | u6/param_byte[7]_i_1_n_0                                                        |                                 |                2 |             18 |
+|  u3/rd_clk_BUFG | u2/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0] |                                 |                2 |             20 |
+|  clk_IBUF_BUFG  | u4/dac_data                                                                     | u4/dac_data[11]_i_1_n_0         |                2 |             24 |
+|  u1/wr_clk_BUFG | u2/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0] |                                 |                4 |             30 |
+|  clk_IBUF_BUFG  | u4/adc_sampling_rate                                                            | u4/adc_sampling_rate[7]_i_1_n_0 |                4 |             32 |
+|  u1/wr_clk_BUFG |                                                                                 |                                 |                4 |             44 |
+|  u3/rd_clk_BUFG |                                                                                 |                                 |                4 |             44 |
+|  clk_IBUF_BUFG  | u4/func_byte_reg[7]_i_1_n_0                                                     | u4/func_byte_reg_reg[1]_0       |               11 |             64 |
+|  clk_IBUF_BUFG  |                                                                                 |                                 |               18 |             76 |
+|  clk_IBUF_BUFG  |                                                                                 | u4/func_byte_reg_reg[1]_0       |               24 |             96 |
++-----------------+---------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+
+

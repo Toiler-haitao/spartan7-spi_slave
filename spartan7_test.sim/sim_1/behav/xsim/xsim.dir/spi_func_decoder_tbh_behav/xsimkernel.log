@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_func_decoder_tbh_behav/xsimk.exe -simmode gui -wdb spi_func_decoder_tbh_behav.wdb -simrunnum 0 -socket 61251
+Design successfully loaded
+Design Loading Memory Usage: 5028 KB (Peak: 5028 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 5672 KB (Peak: 5672 KB)
+Simulation CPU Usage: 46 ms

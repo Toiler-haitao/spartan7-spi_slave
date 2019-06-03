@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_frame_encoder_tbh_time_impl/xsimk.exe -simmode gui -wdb spi_frame_encoder_tbh_time_impl.wdb -simrunnum 0 -socket 50218
+Design successfully loaded
+Design Loading Memory Usage: 6452 KB (Peak: 6452 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7852 KB (Peak: 7852 KB)
+Simulation CPU Usage: 46 ms

@@ -1,0 +1,1338 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat May 11 20:41:33 2019
+# Process ID: 15816
+# Current directory: C:/FILES/asw_files/FPGA/spartan7_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11276 C:\FILES\asw_files\FPGA\spartan7_test\spartan7_test.xpr
+# Log file: C:/FILES/asw_files/FPGA/spartan7_test/vivado.log
+# Journal file: C:/FILES/asw_files/FPGA/spartan7_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 783.258 ; gain = 101.121
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 842.672 ; gain = 14.824
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top SPI_Slave [current_fileset]
+update_compile_order -fileset sources_1
+set_property top SPI_slave_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port SSEL on this module [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xsim.dir/SPI_slave_tbh_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xsim.dir/SPI_slave_tbh_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat May 11 21:48:09 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 54.285 ; gain = 0.719
+INFO: [Common 17-206] Exiting Webtalk at Sat May 11 21:48:09 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 865.797 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 872.852 ; gain = 7.055
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 873.660 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 880.586 ; gain = 0.000
+run 2 us
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/SPI_slave_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh_behav xil_defaultlib.SPI_slave_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module xil_defaultlib.SPI_slave_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh} -tclbatch {SPI_slave_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v w ]
+add_files -fileset sim_1 C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top fifo_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 905.309 ; gain = 7.266
+run 2 us
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top SPI_slave_tbh2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh2
+ERROR: [VRFC 10-1280] procedural assignment to a non-register recv_fifo_full is not permitted, left-hand side should be reg/integer/time/genvar [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:56]
+ERROR: [VRFC 10-91] s_data is not declared [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:61]
+ERROR: [VRFC 10-91] s_data is not declared [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:110]
+ERROR: [VRFC 10-91] s_data is not declared [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:161]
+ERROR: [VRFC 10-2787] module SPI_slave_tbh2 ignored due to previous errors [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:23]
+"xvhdl --incr --relax -prj SPI_slave_tbh2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh2
+"xvhdl --incr --relax -prj SPI_slave_tbh2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh2_behav xil_defaultlib.SPI_slave_tbh2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port dout [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:46]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_s...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_COMMON_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.SPI_slave_tbh2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh2_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim/xsim.dir/SPI_slave_tbh2_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 54.500 ; gain = 0.328
+INFO: [Common 17-206] Exiting Webtalk at Sat May 11 23:12:05 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 917.113 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh2_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh2} -tclbatch {SPI_slave_tbh2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 917.113 ; gain = 0.000
+run 2 us
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 917.113 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh2
+"xvhdl --incr --relax -prj SPI_slave_tbh2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh2_behav xil_defaultlib.SPI_slave_tbh2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port dout [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:48]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_s...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_COMMON_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.SPI_slave_tbh2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh2_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh2} -tclbatch {SPI_slave_tbh2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 917.113 ; gain = 0.000
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh2
+"xvhdl --incr --relax -prj SPI_slave_tbh2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh2_behav xil_defaultlib.SPI_slave_tbh2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port dout [C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v:48]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_s...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_COMMON_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.SPI_slave_tbh2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh2_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh2} -tclbatch {SPI_slave_tbh2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 917.641 ; gain = 0.527
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPI_slave_tbh2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SPI_slave_tbh2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sources_1/imports/new/spi_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_Slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/new/SPI_slave_tbh2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_slave_tbh2
+"xvhdl --incr --relax -prj SPI_slave_tbh2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SPI_slave_tbh2_behav xil_defaultlib.SPI_slave_tbh2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Slave
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_s...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_COMMON_...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.SPI_slave_tbh2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_slave_tbh2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPI_slave_tbh2_behav -key {Behavioral:sim_1:Functional:SPI_slave_tbh2} -tclbatch {SPI_slave_tbh2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source SPI_slave_tbh2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPI_slave_tbh2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 919.680 ; gain = 1.855
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.synchronization_stages {2} CONFIG.Input_Depth {2048} CONFIG.Output_Depth {2048} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.Dout_Reset_Value {00} CONFIG.Data_Count_Width {11} CONFIG.Write_Data_Count_Width {11} CONFIG.Read_Data_Count_Width {11} CONFIG.Full_Threshold_Assert_Value {2045} CONFIG.Full_Threshold_Negate_Value {2044} CONFIG.Enable_Safety_Circuit {true}] [get_ips fifo_generator_0]
+generate_target all [get_files  C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+reset_run fifo_generator_0_synth_1
+launch_runs -jobs 8 fifo_generator_0_synth_1
+[Sat May 11 23:43:02 2019] Launched fifo_generator_0_synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/sim_scripts -ip_user_files_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files -ipstatic_source_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/modelsim} {questa=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/questa} {riviera=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/riviera} {activehdl=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.Enable_Safety_Circuit {false}] [get_ips fifo_generator_0]
+generate_target all [get_files  C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+reset_run fifo_generator_0_synth_1
+launch_runs -jobs 8 fifo_generator_0_synth_1
+[Sat May 11 23:46:17 2019] Launched fifo_generator_0_synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/sim_scripts -ip_user_files_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files -ipstatic_source_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/modelsim} {questa=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/questa} {riviera=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/riviera} {activehdl=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property top fifo_tbh [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1071.254 ; gain = 2.816
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1071.254 ; gain = 0.000
+run 2 us
+run 2 us
+run 2 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1071.742 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Performance_Options {First_Word_Fall_Through} CONFIG.Reset_Pin {true} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.Use_Dout_Reset {true} CONFIG.Dout_Reset_Value {00} CONFIG.Full_Threshold_Assert_Value {2047} CONFIG.Full_Threshold_Negate_Value {2046} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5} CONFIG.Enable_Safety_Circuit {false}] [get_ips fifo_generator_0]
+generate_target all [get_files  C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+reset_run fifo_generator_0_synth_1
+launch_runs -jobs 8 fifo_generator_0_synth_1
+[Sun May 12 00:04:42 2019] Launched fifo_generator_0_synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/sim_scripts -ip_user_files_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files -ipstatic_source_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/modelsim} {questa=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/questa} {riviera=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/riviera} {activehdl=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_p...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.133 ; gain = 8.148
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_p...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.133 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_p...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.133 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.Reset_Pin {false} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Use_Dout_Reset {false} CONFIG.Dout_Reset_Value {0}] [get_ips fifo_generator_0]
+generate_target all [get_files  C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fifo_generator_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fifo_generator_0'...
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+reset_run fifo_generator_0_synth_1
+launch_runs -jobs 8 fifo_generator_0_synth_1
+[Sun May 12 00:10:18 2019] Launched fifo_generator_0_synth_1...
+Run output will be captured here: C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.runs/fifo_generator_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/FILES/asw_files/FPGA/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/sim_scripts -ip_user_files_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files -ipstatic_source_dir C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/modelsim} {questa=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/questa} {riviera=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/riviera} {activehdl=C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tbh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fifo_tbh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.srcs/sim_1/imports/new/fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_tbh
+"xvhdl --incr --relax -prj fifo_tbh_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 211650ebea85420f8cf47f9edc201723 --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_tbh_behav xil_defaultlib.fifo_tbh xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_p...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_tbh
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tbh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/FILES/asw_files/FPGA/spartan7_test/spartan7_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tbh_behav -key {Behavioral:sim_1:Functional:fifo_tbh} -tclbatch {fifo_tbh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source fifo_tbh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tbh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.133 ; gain = 0.000
+run 2 us
+run 2 us
+run 2 us
+run 2 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 12 00:14:34 2019...

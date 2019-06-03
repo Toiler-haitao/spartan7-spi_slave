@@ -1,0 +1,7 @@
+Running: xsim.dir/SPI_slave_tbh_time_impl/xsimk.exe -simmode gui -wdb SPI_slave_tbh_time_impl.wdb -simrunnum 0 -socket 64218
+Design successfully loaded
+Design Loading Memory Usage: 6508 KB (Peak: 6508 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7596 KB (Peak: 7596 KB)
+Simulation CPU Usage: 30 ms
