@@ -1,1 +1,0 @@
-# spartan7-spi_slave
